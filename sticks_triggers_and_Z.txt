@@ -1,0 +1,63 @@
+C-Stick
+
+- C-Left
+
+Common Emitter pins for face buttons - Emitter
+Middle - Collector
+
+- C-Right
+
+Top - Emitter
+Middle - Collector
+
+
+
+C-Up
+Right - Emitter
+Middle - Collector
+
+
+C-Down
+
+Common Emitter pins for face buttons - Collector
+Middle - Emitter
+
+
+Left/Movement Stick
+
+- Up
+Top - Emitter
+Middle - Collector
+
+- Down
+Bottom - Emitter
+Middle - Collector
+
+- Left
+
+Left - Emitter
+Middle - Collector
+
+- Right
+
+Right - Emitter
+Middle - Collector
+
+SIDE NOTE: I connected the collectors for both UP and Down to them middle pin on a rail of a breadboard same concept for the Left and right directions.
+
+SIDE NOTE: the sticks are potentiometers so if you need slower speeds you will need to add a seperate transistor with a resistance of your choice between the base of the transistor and a pin comming from the Arduino. 
+
+
+
+L/R trigger
+
+Left - Emitter
+
+Right - Collector
+
+
+Z 
+
+Left - Collector
+
+Right - Emitter

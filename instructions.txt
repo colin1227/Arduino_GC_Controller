@@ -1,0 +1,58 @@
+If you know Arduincode(C++), how to solder, how NPN transistors work, and have a lot of jumper wires + a PCB and/or breadboards and can be patient you can try this out.
+
+
+
+1.) buy a GC controller by CIPON on amazon, unscrew everything, remove all the casing and buttons.
+
+
+
+(Optional) unsolder the rumble motor.
+
+
+
+2.) solder an NPN transistor for each button into the PCB  about 3 or 4 holes apart from the next transistor.
+
+
+
+3.) color-coded, solder a wire to the base of each transistor, and maybe use a rubber band to contain them until you plug the pins into the Arduino on step 6.
+
+
+
+4.a) if you have enough colored wires for each transistor, solder a wire from the emitter for each transistor, and use another rubber band or 2 to contain the wires, they will be soldered directly on to the button pads later.
+
+
+
+4.b) solder wires from the collector of each transistor and contain the wires with even more rubber bands.
+
+
+
+5.a) for each face button(A, B, X, Y, start, and maybe the D-Pad but Idk because I don't use it for SSBU) carefully solder wire connected to the collector onto the pad for the button.
+
+
+
+5.b) when soldering the wires connected to the emitters, you have a clean option and a messy one, you can connect all the face buttons emitter wire on a breadboard and use one wire from all those wires to this pin. (picture below) or you can solder EVERY wire to the pin shown below(this is the messy option, there's probably no reason to do it this way but I learned that the hard way). The Left and right sticks are too hard to explain so I'll add a text file and pictures of where the emitters and collectors should go.
+
+
+
+6.) If you use the Mega you can plug the base wires into the Arduino. If you use the Due you need to plug the wires connected to the base of each transistor to another breadboard, connect a resistor with a resistance of about 2.2k Ohms or Higher for each base wire and connect it to the ground rail then to the ground on the Arduino. Then if you have enough colored wires left, from the same rail that the resistor and the base wire are connected using a wire to each pin on the Arduino.
+
+
+
+7.a) solder a wire to the ground of the GC controller and connect it to the ground of the Arduino.
+
+
+
+7.b) THE LAST STEP for the hardware,(at this point I have not done any of this but my knowledge of circuitry leads me to believe this is what you want to do yo trigger button presses yourself) take an intact GC controller, cut the wire and solder ground to ground, 3.5V to 3.5V, 5V to 5V, and Data to Data.
+
+
+
+And you're done! you have an Arduino activated GC controller.
+
+
+
+The software will be dependent on what exactly you want to do but you for sure need to set all the wires connected to the board to OUTPUT. From that point on it's trial and error my guy.
+
+
+
+SIDE NOTE: avoid leaving pins on HIGH for an extended period of time, as it will burn your transistors and you will have to re-solder a new one in.
+
